@@ -33,7 +33,7 @@ class Settings:
 
     # File names
     PLUGINS = "plugins"
-    PREFIX_FILE = "prefix.conf"
+    LIBPATHS_FILE = "libpaths.conf"
     EXTRACT_FILE = "extract.conf"
     BINWALK_MAGIC_FILE = "binwalk"
     BINARCH_MAGIC_FILE = "binarch"
@@ -61,7 +61,7 @@ class Settings:
                                 binarch=self._system_path(self.BINWALK_MAGIC_DIR, self.BINARCH_MAGIC_FILE),
                                 bincast=self._system_path(self.BINWALK_MAGIC_DIR, self.BINCAST_MAGIC_FILE),
                                 extract=self._system_path(self.BINWALK_CONFIG_DIR, self.EXTRACT_FILE),
-                                prefix=self._system_path(self.BINWALK_CONFIG_DIR, self.PREFIX_FILE),
+                                libpaths=self._system_path(self.BINWALK_CONFIG_DIR, self.LIBPATHS_FILE),
                                 plugins=self._system_path(self.BINWALK_PLUGINS_DIR))
 
     def find_magic_file(self, fname, system_only=False, user_only=False):
